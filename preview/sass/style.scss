@@ -7,12 +7,21 @@
 
 .grid-container {
     width: 1140px;
+    height: 1100px;
     margin: 82px auto 0 auto;
     display: grid;
-    grid-template-columns: repeat(4, 240px);
-    grid-template-rows: repeat(2, 260px);
+    grid-template-columns: repeat(3, 240px);
+    grid-template-rows: repeat(4, auto);
     grid-auto-rows: 260px;
     gap: 60px;
+    
+    grid-template-areas: 
+    'first1 first1 first3'
+    'first2 first2 first3'
+    'first4 first5 first3'
+    'first6 first7 . ';
+    justify-items: space-around;
+    align-items: space-around;
 }
 
 .news-item {
@@ -25,4 +34,33 @@
         font-size: 14px;
         line-height: 16px;
     }
+}
+
+
+#first1 {
+    grid-area: first1;
+}
+
+#first2 {
+    grid-area: first2;
+}
+
+#first3 {
+    grid-area: first3;
+}
+
+#first4 {
+    grid-area: first4;
+}
+
+#first5 {
+    grid-area: first5;
+}
+
+#first6 {
+    grid-area: first6;
+}
+
+#first7 {
+    grid-area: first7;
 }
